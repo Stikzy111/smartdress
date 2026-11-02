@@ -2,18 +2,25 @@
   "expo": {
     "name": "SmartDress",
     "slug": "smartdress",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "backgroundColor": "#FCFFFF",
+    "backgroundColor": "#0B0B0C",
+    "icon": "./assets/icon.png",
     "newArchEnabled": false,
-    "android": { "package": "com.smartdress.app", "versionCode": 1 },
+    "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#0B0B0C" },
+    "android": {
+      "package": "com.smartdress.app",
+      "versionCode": 2,
+      "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#0B0B0C" }
+    },
     "plugins": [
       ["react-native-ble-plx", {
         "isBackgroundEnabled": false,
         "neverForLocation": true,
         "bluetoothAlwaysPermission": "SmartDress utilise le Bluetooth pour communiquer avec la machine."
-      }]
+      }],
+      ["expo-image-picker", { "photosPermission": "SmartDress accède à vos photos pour importer vos motifs PNG." }]
     ]
   }
 }
